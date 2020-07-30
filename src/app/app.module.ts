@@ -10,6 +10,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
+import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 
 //components
 import { LoginComponent } from './admin/login/login.component';
@@ -32,7 +33,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 		AngularFirestoreModule,
 		AngularFireStorageModule
 	],
-	providers: [],
+	providers: [AngularFireAuthGuard],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
