@@ -14,7 +14,7 @@ import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 
 //components
 import { LoginComponent } from './admin/login/login.component';
-import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
+import { UserDashboardComponent } from './user/user_dashboard/user_dashboard.component';
 import { ProfileComponent } from './user/profile/profile.component';
 
 
