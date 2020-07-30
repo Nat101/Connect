@@ -11,15 +11,23 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 
+//components
+import { LoginComponent } from './admin/login/login.component';
+import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
+import { ProfileComponent } from './user/profile/profile.component';
+
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+		LoginComponent,
+		UserDashboardComponent,
+		ProfileComponent
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		AngularFireModule.initializeApp(environment.firebaseConfig, 'projectName'),
+		AngularFireModule.initializeApp(environment.firebaseConfig, 'connect'),
 		AngularFireAuthModule,
 		AngularFirestoreModule,
 		AngularFireStorageModule
