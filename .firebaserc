@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "connect-8f29f": {
+      "hosting": {
+        "Connect": [
+          "connect-8f29f"
+        ]
+      }
+    }
+  }
+}
