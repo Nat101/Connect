@@ -10,21 +10,30 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
+import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
+
+//components
+import { LoginComponent } from './admin/login/login.component';
+import { UserDashboardComponent } from './user/user_dashboard/user_dashboard.component';
+import { ProfileComponent } from './user/profile/profile.component';
 
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+		LoginComponent,
+		UserDashboardComponent,
+		ProfileComponent
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		AngularFireModule.initializeApp(environment.firebaseConfig, 'projectName'),
+		AngularFireModule.initializeApp(environment.firebaseConfig, 'connect'),
 		AngularFireAuthModule,
 		AngularFirestoreModule,
 		AngularFireStorageModule
 	],
-	providers: [],
+	providers: [AngularFireAuthGuard],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
