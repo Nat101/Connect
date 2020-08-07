@@ -4,3 +4,25 @@
 <br>
 
 <h3>Profile Page</h3>
+
+
+<p>Current profile:</p>
+<p>First Name: {{ profileData.firstName }}</p>
+<p>Last Name: {{ profileData.lastName }}</p>
+<p>Birthday: {{ profileData.birthday }}</p>
+
+<br>
+<p>Update profile:</p>
+<form [formGroup]="this.profileForm">
+	<input placeholder="First Name" 
+		   formControlName="firstName" 
+		   type="text">
+	<input placeholder="Last Name" 
+		   formControlName="lastName" 
+		   type="text">
+	<input placeholder="Birthday" 
+		   formControlName="birthday" 
+		   type="date">
+	<button (click)="onUpdateProfile(this.profileForm)"> Update Profile </button>
+</form>
+

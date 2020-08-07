@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from "@angular/forms";
 
+//main
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -18,6 +20,8 @@ import { UserDashboardComponent } from './user/user_dashboard/user_dashboard.com
 import { ProfileComponent } from './user/profile/profile.component';
 
 
+
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -27,6 +31,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 	],
 	imports: [
 		BrowserModule,
+		ReactiveFormsModule,
 		AppRoutingModule,
 		AngularFireModule.initializeApp(environment.firebaseConfig, 'connect'),
 		AngularFireAuthModule,
