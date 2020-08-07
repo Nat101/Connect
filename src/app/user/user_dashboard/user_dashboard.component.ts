@@ -33,7 +33,7 @@ export class UserDashboardComponent implements OnInit {
 			})
 		}
 			
-		profileData;
-		profileDocID;
+	profileData;
+	profileDocID;
 
 }
